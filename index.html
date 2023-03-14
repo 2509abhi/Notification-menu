@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Notifications page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body{
+      background-color: antiquewhite;
+      font-family: sans-serif;
+    }
+    img{
+      width: 2rem;
+      height: 2rem;
+    }
+    p{
+      padding-right: 1rem;
+      padding-left: 1rem;
+    }
+    a{
+      text-decoration-line: none;
+    }
+    #body{
+      background-color: #fff;
+      width: 50%;
+      margin: 3rem 25%;
+      padding: 1rem;
+    }
+    .btn{
+      color: #fff;
+      display: inline-block;
+      background-color: blue;
+      text-align: center;
+      width: 2.5px;
+      height: 1.4rem;
+      padding: 1rem;
+      margin-right: 18rem;  
+    }
+    .top-class{
+      display: flex;
+      
+    }
+    .down{
+      margin-top: 1rem;
+    }
+    .black{
+      color: black;
+      font-weight: bold;
+    }
+    .black:hover{
+      color: rgb(97, 97, 219);
+    }
+    .blue{
+      color: rgb(97, 97, 219);
+    }
+    .blue:hover{
+      color: rgb(58, 58, 247);
+    }
+    .flex{
+      display: flex;
+      background-color: #fff;
+      margin: 2rem;
+      padding: 1rem 2rem;
+    }
+    .hid{
+      display: none;
+    }
+    .nn{
+      background-color: rgb(255, 247, 236);
+    }
+    .message{
+      border: solid .4px;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+<main id = "body">
+  <div class="top-class">
+  <h1>Notifications </h1>
+    <p class ="down btn">3</p>
+  <a class="down blue" href="#">Mark all as read</a>
+</div>
+  <div class="flex botton-class1 nn">
+    <img class="img-p" src="assets/images/avatar-mark-webber.webp" alt="mark">
+    <div class="p">
+    <p><a class="black" href="#"> Mark Webber</a> reacted to your recent post <a class="black" href="#"> first tournament today!</a><a class ="red">🔴</a></p>
+    <p>1m ago</p>
+
+  </div>
+</div>
+  <div class="flex botton-class2 nn">
+    <img class="img-p" src="assets/images/avatar-angela-gray.webp" alt="mark">
+    <div class="p">
+      <p><a class="black" href="#">Angela Gray</a> followed you<a class ="red">🔴</a></p>
+      <p>5m ago</p>
+  </div>
+</div>
+  <div class="flex botton-class3 nn">
+    <img class="img-p" src="assets/images/avatar-jacob-thompson.webp" alt="mark">
+    <div class="p">
+      <p><a class="black" href="#">Jacob Thompson</a> has joined your group <a class="blue" href="#">Chess Club</a><a class ="red">🔴</a></p>
+      <p>1 day ago</p>
+  </div>
+</div>
+  <div class="flex botton-class">
+    <img class="img-p" src="assets/images/avatar-rizky-hasanuddin.webp" alt="mark">
+    <div class="p">
+      <p><a class="black" href="#">Rizky Hasanuddin </a> sent you a private message</p>
+      <p>5 days ago</p>
+      <p class="message">Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and 
+      I'm already having lots of fun and improving my game.</p>
+  </div>
+</div>
+  <div class="flex botton-class">
+    <img class="img-p" src="assets/images/avatar-kimberly-smith.webp" alt="mark">
+    <div class="p">
+      <p><a class="black" href="#">Kimberly Smith</a> commented on your picture</p>
+      <p>1 week ago</p>
+  </div>
+  <img src="assets/images/image-chess.webp" alt="chess">
+</div>
+  <div class="flex botton-class">
+    <img class="img-p" src="assets/images/avatar-nathan-peterson.webp" alt="mark">
+    <div class="p">
+      <p><a class="black" href="#">Nathan Peterson</a> reacted to your recent post 5 end-game strategies to increase your win rate</p>
+      <p>2 weeks ago</p>
+  </div>
+</div>
+  <div class="flex botton-class">
+    <img class="img-p" src="assets/images/avatar-anna-kim.webp" alt="mark">
+    <div class="p">
+      <p><a class="black" href="#">Anna Kim</a> left the group <a class="blue" href="#">Chess Club</a></p>
+      <p>2 weeks ago
+  </div>
+</div>
+</main>  
+  <div class="attribution">
+    <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" >Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.</p>
+  </div>
+  <script>
+  var temp = 3;
+  document.querySelector(".botton-class1").addEventListener("click",function(){
+    document.querySelector(".botton-class1").classList.remove("nn");
+    document.querySelector(".botton-class1 .red").classList.add("hid");
+    
+    temp--;
+    document.querySelector(".btn").innerText = temp;   
+  });
+  document.querySelector(".botton-class2").addEventListener("click",function(){
+    document.querySelector(".botton-class2").classList.remove("nn");
+    document.querySelector(".botton-class2 .red").classList.add("hid");
+    temp--;
+    document.querySelector(".btn").innerText = temp;   
+  });
+  document.querySelector(".botton-class3").addEventListener("click",function(){
+    document.querySelector(".botton-class3").classList.remove("nn");
+    document.querySelector(".botton-class3 .red").classList.add("hid");
+    temp--;
+    document.querySelector(".btn").innerText = temp;   
+  });
+  </script>
+</body>
+</html>
